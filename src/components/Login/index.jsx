@@ -82,8 +82,8 @@ const Login = () => {
   );
 
   const jwtToken = Cookies.get("jwt_token");
-
-  if (jwtToken !== undefined) {
+  //sometime api url fails Actually !==
+  if (jwtToken === undefined) {
     return <Navigate to="/" replace />;
   }
 
